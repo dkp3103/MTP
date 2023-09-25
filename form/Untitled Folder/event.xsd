@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Define complex type for event -->
+  <xs:complexType name="EventType">
+    <xs:sequence>
+      <xs:element name="Event_Title" type="xs:string"/>
+      <xs:element name="Start_Time" type="xs:dateTime"/>
+      <xs:element name="End_Time" type="xs:dateTime"/>
+      <xs:element name="Location" type="xs:string"/>
+      <xs:element name="Speaker" type="xs:string"/>
+      <xs:element name="Speaker_Biography" type="xs:string"/>
+      <xs:element name="Speaker_Affiliation" type="xs:string"/>
+      <xs:element name="Organizer" type="xs:string"/>
+      <xs:element name="Organizer_Mail" type="xs:string"/>
+      <xs:element name="Approver" type="xs:string"/>
+      <xs:element name="Approver_Mail" type="xs:string"/>
+      <xs:element name="Abstract" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Define root element and reference the event type -->
+  <xs:element name="events">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="seminar" type="EventType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

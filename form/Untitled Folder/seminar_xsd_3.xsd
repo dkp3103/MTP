@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="events">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element name="seminar">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:element name="Event_Title" type="xs:string" />
+              <xs:element name="Start_Time">
+                <xs:complexType>
+                  <xs:attribute name="Date" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="End_Time">
+                <xs:complexType>
+                  <xs:attribute name="Date" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Location" type="xs:string" />
+              <xs:element name="Speaker" type="xs:string" />
+              <xs:element name="Speaker_Biography" type="xs:string" />
+              <xs:element name="Speaker_Affiliation" type="xs:string" />
+              <xs:element name="Organizer" type="xs:string" />
+              <xs:element name="Organizer_Mail" type="xs:string" />
+              <xs:element name="Approver" type="xs:string" />
+              <xs:element name="Approver_Mail" type="xs:string" />
+              <xs:element name="Abstract" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

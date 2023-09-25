@@ -1,0 +1,16 @@
+<events>
+  <seminar>
+    <Event_Title>semina1</Event_Title>
+    <Start_Time>2023-09-20T18:26:00</Start_Time>
+    <End_Time>2023-09-20T19:26:00</End_Time>
+    <Location>sac</Location>
+    <Speaker>prashu</Speaker>
+    <Speaker_Biography>student</Speaker_Biography>
+    <Speaker_Affiliation>pata nahi</Speaker_Affiliation>
+    <Organizer>bala</Organizer>
+    <Organizer_Mail>bala@gmail.com</Organizer_Mail>
+    <Approver>deepak</Approver>
+    <Approver_Mail>deepak@gmail.com</Approver_Mail>
+    <Abstract>hellow</Abstract>
+  </seminar>
+</events>

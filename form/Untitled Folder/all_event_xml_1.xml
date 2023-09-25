@@ -1,0 +1,46 @@
+<!-- Add XML Data -->
+<events>\n  
+  <seminar>\n    
+    <Event_Title>semina1</Event_Title>\n    
+    <Start_Time>2023-09-20 18:26:00</Start_Time>\n    
+    <End_Time>2023-09-20 19:26:00</End_Time>\n    
+    <Location>sac</Location>\n    
+    <Speaker>prashu</Speaker>\n    
+    <Speaker_Biography>student</Speaker_Biography>\n    
+    <Speaker_Affiliation>pata nahi</Speaker_Affiliation>\n    
+    <Organizer>bala</Organizer>\n    
+    <Organizer_Mail>bala@gmail.com</Organizer_Mail>\n    
+    <Approver>deepak</Approver>\n    
+    <Approver_Mail>deepak@gmail.com</Approver_Mail>\n    
+    <Abstract>hellow</Abstract>\n  
+  </seminar>\n  
+  <sport>\n    
+    <Event_Title>Volleyball Turnaments</Event_Title>\n    
+    <Sport_Club_Name>Volleyball club</Sport_Club_Name>\n    
+    <Sport_Name>Volleyball</Sport_Name>\n    
+    <Start_Date>2023-09-21 00:00:00</Start_Date>\n    
+    <End_Date>2023-09-21 00:00:00</End_Date>\n    
+    <Start_Time>8:28:00</Start_Time>\n    
+    <End_Time>18:29:00</End_Time>\n    
+    <Location>sport complex</Location>\n    
+    <Organizer>me</Organizer>\n    
+    <Organizer_Mail>me@gmail.com</Organizer_Mail>\n    
+    <Approver>tu</Approver>\n    
+    <Approver_Mail>tu@gmail.com</Approver_Mail>\n    
+    <Abstract>volleyball game play</Abstract>\n  
+  </sport>\n  
+  <club>\n    
+    <event_title>Ganpati Visarjan</event_title>\n    
+    <club_name>Hindi MitraMandali</club_name>\n    
+    <start_date>2023-09-23 00:00:00</start_date>\n    
+    <end_date>2023-09-23 00:00:00</end_date>\n    
+    <start_time>18:31:00</start_time>\n    
+    <end_time>20:31:00</end_time>\n    
+    <location>mareena beach</location>\n    
+    <organizer>bala</organizer>\n    
+    <organizer_mail>bala@gmail.com</organizer_mail>\n    
+    <approver>deepak</approver>\n    
+    <approver_mail>deepak@gmail.com</approver_mail>\n    
+    <abstract>Ganpati bappaa mauriya agale baras tu jaldi aa</abstract>\n  
+  </club>\n
+</events>\n
