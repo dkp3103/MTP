@@ -1,0 +1,29 @@
+@prefix ex: <http://example.com/events#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Event1 ex:startDate "2023-09-15T09:00:00"^^xsd:dateTime .
+ex:Event1 ex:endDate "2023-09-15T10:30:00"^^xsd:dateTime .
+
+ex:Event2 ex:startDate "2023-09-15T10:45:00"^^xsd:dateTime .  # No overlap with Event1
+ex:Event2 ex:endDate "2023-09-15T11:30:00"^^xsd:dateTime .
+
+ex:Event3 ex:startDate "2023-09-15T11:45:00"^^xsd:dateTime .  # No overlap with Event2
+ex:Event3 ex:endDate "2023-09-15T12:30:00"^^xsd:dateTime .
+
+ex:Event4 ex:startDate "2023-09-15T13:00:00"^^xsd:dateTime .  # No overlap with Event1 or Event2
+ex:Event4 ex:endDate "2023-09-15T14:30:00"^^xsd:dateTime .
+
+ex:Event5 ex:startDate "2023-09-15T15:00:00"^^xsd:dateTime .  # No overlap with Event3
+ex:Event5 ex:endDate "2023-09-15T16:00:00"^^xsd:dateTime .
+
+ex:Event6 ex:startDate "2023-09-15T16:15:00"^^xsd:dateTime .  # No overlap with Event2 or Event5
+ex:Event6 ex:endDate "2023-09-15T17:30:00"^^xsd:dateTime .
+
+ex:Event7 ex:startDate "2023-09-15T17:45:00"^^xsd:dateTime .  # No overlap with Event3 or Event6
+ex:Event7 ex:endDate "2023-09-15T18:30:00"^^xsd:dateTime .
+
+ex:Event8 ex:startDate "2023-09-15T19:00:00"^^xsd:dateTime .  # No overlap with Event4
+ex:Event8 ex:endDate "2023-09-15T20:30:00"^^xsd:dateTime .
+
+ex:Event9 ex:startDate "2023-09-15T21:00:00"^^xsd:dateTime .  # No overlap with any previous event
+ex:Event9 ex:endDate "2023-09-15T22:15:00"^^xsd:dateTime .

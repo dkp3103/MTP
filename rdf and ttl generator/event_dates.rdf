@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://example.org/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://example.org/event1">
+    <ns1:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-15</ns1:startDate>
+    <ns1:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-20</ns1:endDate>
+  </rdf:Description>
+</rdf:RDF>

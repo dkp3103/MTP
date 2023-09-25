@@ -1,0 +1,14 @@
+@prefix ex: <http://example.com/events#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Event1 ex:startDate "2023-09-15T09:00:00"^^xsd:dateTime .
+ex:Event1 ex:endDate "2023-09-15T10:30:00"^^xsd:dateTime .
+
+ex:Event2 ex:startDate "2023-09-15T11:00:00"^^xsd:dateTime .
+ex:Event2 ex:endDate "2023-09-15T12:00:00"^^xsd:dateTime .
+
+ex:Event3 ex:startDate "2023-09-15T11:30:00"^^xsd:dateTime .
+ex:Event3 ex:endDate "2023-09-15T13:00:00"^^xsd:dateTime .
+
+ex:Event4 ex:startDate "2023-09-15T11:30:00"^^xsd:dateTime .
+ex:Event4 ex:endDate "2023-09-15T13:00:00"^^xsd:dateTime .

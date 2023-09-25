@@ -1,0 +1,15 @@
+@prefix ex: <http://example.com/events#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:EventShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path ex:startDate ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:path ex:endDate ;
+        sh:datatype xsd:dateTime ;
+        sh:minExclusive ex:startDate ;
+    ] .
