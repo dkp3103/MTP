@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 70%; /* Adjust the width to occupy 70% of the webpage */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="time"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style> -->
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .form-container {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        width: 70%; /* Adjust the width to occupy 70% of the webpage */
+        padding: 20px;
+    }
+
+    .form-group {
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column; /* Display fields in a column layout */
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    label {
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="time"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Event Form</h1>
+        <div class="form-group">
+            <label for="event_type">Event Type:</label>
+            <select id="event_type" name="event_type">
+                <option value="none">Select</option>
+                <option value="seminar">Seminar</option>
+                <option value="sport">Sports</option>
+                <option value="club">Club</option>
+            </select>
+        </div>
+
+        <div class="form-group hidden" id="seminar_name">
+            <label for="seminar_type_${eventNumber}">Seminar Type:</label>
+                    <input type="text" id="seminar_type_${eventNumber}" name="seminar_type_${eventNumber}">
+                    <br>
+                    <label for="event_title_${eventNumber}">Event Title:</label>
+                    <input type="text" id="event_title_${eventNumber}" name="event_title_${eventNumber}">
+                    <br>
+                    <label for="department_${eventNumber}">Department:</label>
+                    <input type="text" id="department_${eventNumber}" name="department_${eventNumber}">
+                    <br>
+                    <label for="start_time_${eventNumber}">Start Time:</label>
+                    <input type="datetime-local" id="start_time_${eventNumber}" name="start_time_${eventNumber}">
+                    <br>
+                    <label for="end_time_${eventNumber}">End Time:</label>
+                    <input type="datetime-local" id="end_time_${eventNumber}" name="end_time_${eventNumber}">
+                    <br>
+                    <label for="location_${eventNumber}">Location:</label>
+                    <input type="text" id="location_${eventNumber}" name="location_${eventNumber}">
+                    <br>
+                    <label for="speaker_${eventNumber}">Speaker:</label>
+                    <input type="text" id="speaker_${eventNumber}" name="speaker_${eventNumber}">
+                    <br>
+                    <label for="speaker_bio_${eventNumber}">Speaker Biography:</label>
+                    <textarea id="speaker_bio_${eventNumber}" name="speaker_bio_${eventNumber}" rows="4"></textarea>
+                    <br>
+                    <label for="speaker_affiliation_${eventNumber}">Speaker Affiliation:</label>
+                    <input type="text" id="speaker_affiliation_${eventNumber}" name="speaker_affiliation_${eventNumber}">
+                    <br>
+                    <label for="organizer_${eventNumber}">Organizer:</label>
+                    <input type="text" id="organizer_${eventNumber}" name="organizer_${eventNumber}">
+                    <br>
+                    <label for="organizer_mail_${eventNumber}">Organizer Mail:</label>
+                    <input type="email" id="organizer_mail_${eventNumber}" name="organizer_mail_${eventNumber}">
+                    <br>
+                    <label for="approver_${eventNumber}">Approver:</label>
+                    <input type="text" id="approver_${eventNumber}" name="approver_${eventNumber}">
+                    <br>
+                    <label for="approver_mail_${eventNumber}">Approver Mail:</label>
+                    <input type="email" id="approver_mail_${eventNumber}" name="approver_mail_${eventNumber}">
+                    <br>
+                    <label for="abstract_${eventNumber}">Abstract:</label>
+                    <textarea id="abstract_${eventNumber}" name="abstract_${eventNumber}" rows="4"></textarea>
+        </div>
+
+        <div class="form-group hidden" id="sport_name">
+                    <label for="event_title_${eventNumber}">Event Title:</label>
+                    <input type="text" id="event_title_${eventNumber}" name="event_title_${eventNumber}">
+                    <br>
+                    <label for="sport_club_name_${eventNumber}">Sport Club Name:</label>
+                    <input type="text" id="sport_club_name_${eventNumber}" name="sport_club_name_${eventNumber}">
+                    <br>
+                    <label for="sport_name_${eventNumber}">Sport Name:</label>
+                    <input type="text" id="sport_name_${eventNumber}" name="sport_name_${eventNumber}">
+                    <br>
+                    <label for="start_date_${eventNumber}">Start Date:</label>
+                    <input type="date" id="start_date_${eventNumber}" name="start_date_${eventNumber}">
+                    <br>
+                    <label for="end_date_${eventNumber}">End Date:</label>
+                    <input type="date" id="end_date_${eventNumber}" name="end_date_${eventNumber}">
+                    <br>
+                    <label for="start_time_${eventNumber}">Start Time:</label>
+                    <input type="time" id="start_time_${eventNumber}" name="start_time_${eventNumber}">
+                    <br>
+                    <label for="end_time_${eventNumber}">End Time:</label>
+                    <input type="time" id="end_time_${eventNumber}" name="end_time_${eventNumber}">
+                    <br>
+                    <label for="location_${eventNumber}">Location:</label>
+                    <input type="text" id="location_${eventNumber}" name="location_${eventNumber}">
+                    <br>
+                    <label for="organizer_${eventNumber}">Organizer:</label>
+                    <input type="text" id="organizer_${eventNumber}" name="organizer_${eventNumber}">
+                    <br>
+                    <label for="organizer_mail_${eventNumber}">Organizer Mail:</label>
+                    <input type="email" id="organizer_mail_${eventNumber}" name="organizer_mail_${eventNumber}">
+                    <br>
+                    <label for="approver_${eventNumber}">Approver:</label>
+                    <input type="text" id="approver_${eventNumber}" name="approver_${eventNumber}">
+                    <br>
+                    <label for="approver_mail_${eventNumber}">Approver Mail:</label>
+                    <input type="email" id="approver_mail_${eventNumber}" name="approver_mail_${eventNumber}">
+                    <br>
+                    <label for="abstract_${eventNumber}">Abstract:</label>
+                    <textarea id="abstract_${eventNumber}" name="abstract_${eventNumber}" rows="4"></textarea>
+        </div>
+
+        <div class="form-group hidden" id="club_name">
+            <label for="event_title_${eventNumber}">Event Title:</label>
+                    <input type="text" id="event_title_${eventNumber}" name="event_title_${eventNumber}">
+                    <br>
+                    <label for="club_name_${eventNumber}">Club Name:</label>
+                    <input type="text" id="club_name_${eventNumber}" name="club_name_${eventNumber}">
+                    <br>
+                    <label for="start_date_${eventNumber}">Start Date:</label>
+                    <input type="date" id="start_date_${eventNumber}" name="start_date_${eventNumber}">
+                    <br>
+                    <label for="end_date_${eventNumber}">End Date:</label>
+                    <input type="date" id="end_date_${eventNumber}" name="end_date_${eventNumber}">
+                    <br>
+                    <label for="start_time_${eventNumber}">Start Time (HH:MM):</label>
+                    <input type="time" id="start_time_${eventNumber}" name="start_time_${eventNumber}">
+                    <br>
+                    <label for="end_time_${eventNumber}">End Time (HH:MM):</label>
+                    <input type="time" id="end_time_${eventNumber}" name="end_time_${eventNumber}">
+                    <br>
+                    <label for="location_${eventNumber}">Location:</label>
+                    <input type="text" id="location_${eventNumber}" name="location_${eventNumber}">
+                    <br>
+                    <label for="organizer_${eventNumber}">Organizer:</label>
+                    <input type="text" id="organizer_${eventNumber}" name="organizer_${eventNumber}">
+                    <br>
+                    <label for="organizer_mail_${eventNumber}">Organizer Mail:</label>
+                    <input type="email" id="organizer_mail_${eventNumber}" name="organizer_mail_${eventNumber}">
+                    <br>
+                    <label for="approver_${eventNumber}">Approver:</label>
+                    <input type="text" id="approver_${eventNumber}" name="approver_${eventNumber}">
+                    <br>
+                    <label for="approver_mail_${eventNumber}">Approver Mail:</label>
+                    <input type="email" id="approver_mail_${eventNumber}" name="approver_mail_${eventNumber}">
+                    <br>
+                    <label for="abstract_${eventNumber}">Abstract:</label>
+                    <textarea id="abstract_${eventNumber}" name="abstract_${eventNumber}" rows="4"></textarea>
+        </div>
+        <!-- Add a submit button -->
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </div>
+
+    <script>
+        const eventTypeSelect = document.getElementById("event_type");
+        const seminarName = document.getElementById("seminar_name");
+        const sportName = document.getElementById("sport_name");
+        const clubName = document.getElementById("club_name");
+
+        eventTypeSelect.addEventListener("change", function () {
+            // Hide all fields
+            seminarName.classList.add("hidden");
+            sportName.classList.add("hidden");
+            clubName.classList.add("hidden");
+
+            // Show the selected field based on the event type
+            const selectedEventType = eventTypeSelect.value;
+            if (selectedEventType === "seminar") {
+                seminarName.classList.remove("hidden");
+            } else if (selectedEventType === "sport") {
+                sportName.classList.remove("hidden");
+            } else if (selectedEventType === "club") {
+                clubName.classList.remove("hidden");
+            }
+        });
+    </script>
+</body>
+</html>
